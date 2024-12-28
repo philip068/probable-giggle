@@ -11,6 +11,7 @@ class PatternWeights(Enum):
     BACKTRACKING = ("Backtracking", 2)
     DFS = ("Depth-First Search", 3)
     BFS = ("Breadth-First Search", 3)
+    DESIGN = ("Design", 3)
     DYNAMIC_PROGRAMMING = ("Dynamic Programming", 5)
     BIT_MANIPULATION = ("Bit Manipulation", 2)
     TOP_DOWN_DP = ("Top-Down DP", 4)
