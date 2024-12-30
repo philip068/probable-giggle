@@ -1,0 +1,4 @@
+matplotlib
+prettytable
+click
+validators
