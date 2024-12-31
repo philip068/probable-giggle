@@ -55,7 +55,7 @@ python src/db_init.py
 ```
 
 """
-Optional but recommended: Seed the database with `add_problems.py` since it uses `sample_problems.py`.
+Optional but recommended: Seed the database with `src/add_problems.py` since it uses `sample_problems.py`.
 This can speed up CLI readiness for usefulness.
 """
 
@@ -66,65 +66,65 @@ This can speed up CLI readiness for usefulness.
 #### Database Management
 Initialize or Reset Database:
 ```sh
-python cli.py reset
+python src/cli.py reset
 ```
 
 #### Problem Management
 Add a Problem:
 ```sh
-python cli.py problem add
+python src/cli.py problem add
 ```
 
 Bulk Add Problems:
 ```sh
-python add_problems.py
+python src/add_problems.py
 ```
 
 List Problems:
 ```sh
-python cli.py problem list --difficulty Medium --topic Array
+python src/cli.py problem list --difficulty Medium --topic Array
 ```
 
 #### Progress Tracking
 View Overall Progress:
 ```sh
-python cli.py view-progress
+python src/cli.py view-progress
 ```
 
 Simulate Problem Mastery (Testing Feature):
 ** this can be useful to manually alter problem progressions
 ```sh
-python simulate_mastery.py --problem-id <ID> --attempts <NUM> --successes <NUM>
+python src/simulate_mastery.py --problem-id <ID> --attempts <NUM> --successes <NUM>
 ```
 
 #### Visualization
 Generate Visual Insights:
 ```sh
-python cli.py visualize
+python src/cli.py visualize
 ```
 
 #### Daily Scheduler
 Get Today’s Problems:
 ```sh
-python cli.py today
+python src/cli.py today
 ```
 
 ### Example Workflows
 Add Problems and Track Progress:
 ```sh
-python cli.py problem add
-python cli.py view-progress
+python src/cli.py problem add
+python src/cli.py view-progress
 ```
 
 Analyze Weak Topics:
 ```sh
-python cli.py problem list --topic "Dynamic Programming"
-python cli.py today
+python src/cli.py problem list --topic "Dynamic Programming"
+python src/cli.py today
 ```
 
 Visualize Success Trends:
 ```sh
-python cli.py visualize
+python src/cli.py visualize
 ```
 
 ## Detailed Modules
@@ -216,14 +216,14 @@ The `--help` flag is available for all CLI commands to guide users through usage
 
 ### Global Help:
 ```sh
-python cli.py --help
+python src/cli.py --help
 ```
 Displays a summary of all available commands and their purpose.
 
 ### Command-Specific Help:
 View options and descriptions for a specific command:
 ```sh
-python cli.py problem add --help
+python src/cli.py problem add --help
 ```
 Provides detailed guidance for using the `add` subcommand under `problem`.
 
@@ -243,7 +243,7 @@ db_path = leetcode_mastery.db
 ```
 Reinitialize if necessary:
 ```sh
-python db_init.py
+python src/db_init.py
 ```
 
 #### Dependencies Missing:
@@ -261,7 +261,7 @@ pip install matplotlib
 #### CLI Command Errors:
 Verify correct syntax and parameters:
 ```sh
-python cli.py --help
+python src/cli.py --help
 ```
 
 ## Contributing
