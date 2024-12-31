@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 Initialize the database:
 ```sh
-python db_init.py
+python src/db_init.py
 ```
 
 """
