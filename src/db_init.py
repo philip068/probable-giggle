@@ -155,7 +155,7 @@ def initialize_db(reset: bool = False, db_path: str = 'leetcode_mastery.db') -> 
         "Branch and Bound", "Parallel Algorithms", "Trie", "Union-Find", "Stack", "Queue",
         "Dynamic Programming", "Hash Table", "Heap", "Depth-First Search",
         "Breadth-First Search", "Greedy", "Backtracking", "Bit Manipulation",
-        "Topological Sort", "Binary Search", "Sorting", "Simulation", "Design"
+        "Topological Sort", "Binary Search", "Sorting", "Simulation", "Design", "Sorting"
     ]
 
     with db_cursor(db_path) as cursor:

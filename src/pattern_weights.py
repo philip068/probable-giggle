@@ -33,6 +33,7 @@ class PatternWeights(Enum):
     UNION_FIND = ("Union-Find", 3)
     HASH_TABLE = ("Hash Table", 4)
     STACK = ("Stack", 4)
+    SORTING = ("Sorting", 4)
 
     def __init__(self, display_name: str, weight: int):
         self.display_name = display_name
