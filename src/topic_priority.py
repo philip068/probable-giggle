@@ -1,6 +1,14 @@
 from enum import Enum
+from typing import Dict
+from logger import get_logger
+
+logger = get_logger(__name__, 'topic_priority.log')
 
 class TopicPriority(Enum):
+    """
+    Enum representing different topics and their associated priorities.
+    Lower numerical values indicate higher priority.
+    """
     ARRAY = ("Array", 1)
     STRING = ("String", 2)
     LINKED_LIST = ("Linked List", 3)
@@ -23,18 +31,46 @@ class TopicPriority(Enum):
     BINARY_SEARCH = ("Binary Search", 20)
     SORTING = ("Sorting", 21)
     MATH = ("Math", 22)
+    RECURSION = ("Recursion", 23)
+    DATABASE = ("Database", 24)
 
     def __init__(self, display_name: str, priority: int):
         self.display_name = display_name
         self.priority = priority
 
     @classmethod
+    def _display_name_to_priority_map(cls) -> Dict[str, int]:
+        """
+        Creates a mapping from display names (in lowercase) to their priorities.
+
+        Returns:
+            Dict[str, int]: Mapping of topic display names to priorities.
+        """
+        return {member.display_name.lower(): member.priority for member in cls}
+
+    @classmethod
     def get_priority(cls, topic: str, default: int = 100) -> int:
         """
         Retrieve the priority for a given topic display name.
         Returns a default value if the topic is not found.
+
+        Parameters:
+            topic (str): The display name of the topic.
+            default (int): The default priority to return if topic not found.
+
+        Returns:
+            int: The priority of the topic.
         """
-        for member in cls:
-            if member.display_name.lower() == topic.lower():
-                return member.priority
-        return default
+        priority_map = cls._display_name_to_priority_map()
+        return priority_map.get(topic.lower(), default)
+
+    @classmethod
+    def get_priority_map(cls) -> Dict[str, int]:
+        """
+        Retrieve the entire priority map.
+
+        Returns:
+            Dict[str, int]: Mapping of all topic display names to priorities.
+        """
+        return cls._display_name_to_priority_map()
+

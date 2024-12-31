@@ -146,7 +146,7 @@ def initialize_db(reset: bool = False, db_path: str = 'leetcode_mastery.db') -> 
         "Graph", "Heap", "Dynamic Programming", "Greedy",
         "Backtracking", "Bit Manipulation", "Trie", "Union-Find",
         "Segment Tree", "Topological Sort", "Binary Search",
-        "Sorting", "Math"
+        "Sorting", "Math", "Database"
     ]
     patterns = [
         "Two Pointers", "Sliding Window", "Recursion", "Iteration",
