@@ -42,7 +42,6 @@ Probable-Giggle is a comprehensive CLI-based learning and management tool that e
 Clone the repository:
 ```sh
 git clone https://github.com/philip068/probable-giggle.git
-cd leetcode-mastery
 ```
 
 Install dependencies:
